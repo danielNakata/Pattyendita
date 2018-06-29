@@ -1,7 +1,22 @@
+<?php
+  $param = "";
+  if(isset($_GET["param"])){
+    $param = $_GET["param"];
+    $param = base64_decode($param);
+    $email = strtok($param,"_");
+    $rnd = strtok("_");
+
+    
+
+  }else{
+    header("Location: index.php");
+  }
+
+?>
 <html lang="es" ng-app="pattyendita">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>.:Pattyendita:.</title>
     <link href="css/css/bootstrap.css" rel="stylesheet" />
     <link href="css/dashboard.css" rel="stylesheet" />
@@ -27,7 +42,6 @@
         </li>
       </ul>
     </nav>
-
     <div class="container-fluid">
       <div class="row">
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
